@@ -33,20 +33,24 @@ class App extends Component {
         this.setState({
           gameCards: data
         })
-        console.log(this.state.gameCards);
         resolve(200);
       })
     })
   }
 
   handleStart = () => {
-    console.log('clicked');
-    console.log(this.state.gameStarted);
     if (!this.state.gameStarted) {
+      this.state.gameStarted = true;
       this.getCharacters().then(resolve => {
         console.log(resolve);
       })
     }
+  }
+
+  handleReset = () => {
+    this.setState({gameCards: []});
+    this.setState({ gameStarted: false });
+
   }
 
   handleCardClick = () => {

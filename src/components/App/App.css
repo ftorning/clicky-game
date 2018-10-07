@@ -26,3 +26,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.card {
+  width: 160px;
+  height: 250px;
+}
+
+.card img {
+  padding: 10px;
+}
+
+#board {
+  margin-top: 20px;
+}
